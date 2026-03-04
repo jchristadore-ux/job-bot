@@ -1,0 +1,45 @@
+# ─────────────────────────────────────────────────────────────────
+# Job Bot Configuration
+# ─────────────────────────────────────────────────────────────────
+
+filters:
+  # Minimum annual base salary (USD). Roles with NO salary info still pass.
+  min_salary: 165000
+
+  # Must mention at least one comp signal (bonus/equity/RSU/stock/401k)
+  require_bonus_or_equity: true
+
+  # Only fully remote roles
+  fully_remote_only: true
+
+  # Only full-time employee roles (rejects contract/freelance/part-time)
+  full_time_only: true
+
+scoring:
+  # Title signals — match against job title (case-insensitive substring)
+  title_signals:
+    - tpm
+    - technical program manager
+    - program manager
+    - senior program manager
+    - infrastructure
+    - data center
+    - platform
+    - cloud
+    - devops
+    - sre
+    - site reliability
+    - engineering manager
+    - director of engineering
+    - vp of engineering
+    - principal engineer
+    - staff engineer
+
+sources:
+  remotive: true
+  weworkremotely: true
+  remoteok: true
+
+output:
+  top_n: 5
+  max_job_text_chars: 20000
