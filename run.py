@@ -256,23 +256,28 @@ def score_job(job: dict, bullet_bank: dict, cfg: dict) -> float:
     title = job["title"].lower()
     desc = job["description"].lower()
     combined = f"{title} {desc}"
-    tokens = tokenize(combined)
 
     score = 0.0
+
+    # 0. Title blocklist — heavily penalize roles that are clearly wrong
+    title_blocklist = cfg.get("scoring", {}).get("title_blocklist", [])
+    for blocked in title_blocklist:
+        if blocked.lower() in title:
+            score -= 20.0
+            break  # one penalty is enough
 
     # 1. Keywords priority overlap
     kw_priority = bullet_bank.get("keywords_priority", [])
     kw_hits = sum(1 for kw in kw_priority if kw.lower() in combined)
     score += kw_hits * 2.0
 
-    # 2. Title signals
+    # 2. Title signals — boost roles that match your target titles
     title_signals = cfg.get("scoring", {}).get("title_signals", [
-        "tpm", "program manager", "technical program", "infrastructure",
-        "data center", "senior manager", "director", "vp", "principal",
-        "engineering manager", "platform", "cloud", "devops", "sre"
+        "program manager", "technical program", "infrastructure",
+        "data center", "senior manager", "director", "vp", "portfolio"
     ])
     title_hits = sum(1 for t in title_signals if t.lower() in title)
-    score += title_hits * 3.0
+    score += title_hits * 5.0  # increased from 3.0 to 5.0 for stronger title preference
 
     # 3. Comp signals
     salary = extract_salary(desc, job["salary_raw"])
