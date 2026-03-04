@@ -1,0 +1,134 @@
+{
+  "keywords_priority": [
+    "program manager",
+    "program management",
+    "portfolio management",
+    "infrastructure",
+    "enterprise infrastructure",
+    "data center",
+    "global team",
+    "cross-functional",
+    "stakeholder",
+    "executive",
+    "capital budget",
+    "budget forecasting",
+    "financial oversight",
+    "governance",
+    "healthcare technology",
+    "clinical technology",
+    "AV",
+    "collaboration",
+    "Microsoft 365",
+    "SharePoint",
+    "Teams",
+    "Cisco",
+    "Google",
+    "delivery",
+    "program governance",
+    "process optimization",
+    "operational excellence",
+    "vendor management",
+    "compliance",
+    "remote team",
+    "distributed team",
+    "roadmap",
+    "OKRs",
+    "KPIs",
+    "dashboard",
+    "reporting",
+    "on-time delivery",
+    "risk management",
+    "agile",
+    "project lifecycle",
+    "systems integration"
+  ],
+
+  "target_titles": [
+    "Senior Program Manager",
+    "Global Program Manager",
+    "Director of Program Management",
+    "Director of Infrastructure",
+    "Head of Technology Programs",
+    "VP of Program Management",
+    "Senior Technical Program Manager",
+    "Enterprise Program Manager"
+  ],
+
+  "bullets": [
+    {
+      "id": "b001",
+      "text": "Directed global delivery of Google programs including Starline, TechTalk, Data Centers, and eXi initiatives, managing full project lifecycles with individual budgets ranging from $50K to $1M.",
+      "keywords": ["Google", "data center", "global team", "budget", "program management", "project lifecycle"]
+    },
+    {
+      "id": "b002",
+      "text": "Owned end-to-end execution of a global Data Centers Program, leading a distributed team of 9 across the US, Canada, London, and Norway — delivering on scope, schedule, and budget.",
+      "keywords": ["data center", "distributed team", "global team", "infrastructure", "cross-functional"]
+    },
+    {
+      "id": "b003",
+      "text": "Reduced delivery timelines by 15% through resource optimization and workflow refinement across a portfolio of concurrent global programs.",
+      "keywords": ["delivery", "process optimization", "operational excellence", "program management", "on-time delivery"]
+    },
+    {
+      "id": "b004",
+      "text": "Implemented performance dashboards and structured reporting cadences, increasing on-time completion rates by 20% year-over-year across the program portfolio.",
+      "keywords": ["dashboard", "reporting", "KPIs", "on-time delivery", "program governance", "stakeholder"]
+    },
+    {
+      "id": "b005",
+      "text": "Strengthened executive-level client relationships with Google stakeholders, improving strategic alignment and long-term vendor positioning for multi-year program delivery.",
+      "keywords": ["executive", "stakeholder", "Google", "vendor management", "strategic", "program management"]
+    },
+    {
+      "id": "b006",
+      "text": "Administered over $5M in annual capital budgets across 20–40 concurrent enterprise AV and IT infrastructure projects, identifying cost efficiencies post-design phase without compromising scope.",
+      "keywords": ["capital budget", "budget forecasting", "financial oversight", "infrastructure", "portfolio management"]
+    },
+    {
+      "id": "b007",
+      "text": "Led financial forecasting and program governance for the enterprise WDX Refresh Program at NYU Langone Health, overseeing budget planning, fiscal year giveback strategy, and replenishment modeling.",
+      "keywords": ["financial oversight", "program governance", "budget forecasting", "healthcare technology", "capital budget"]
+    },
+    {
+      "id": "b008",
+      "text": "Served as cross-functional liaison across ITBO, Procurement, and ERP workflows (ONIT, PeopleSoft) to ensure compliance, contract alignment, and execution accuracy across enterprise programs.",
+      "keywords": ["cross-functional", "compliance", "vendor management", "systems integration", "stakeholder", "governance"]
+    },
+    {
+      "id": "b009",
+      "text": "Directed emergency ICU conversion during COVID-19, overseeing AV and infrastructure installations across 274 patient rooms under mission-critical conditions and compressed timelines.",
+      "keywords": ["infrastructure", "healthcare technology", "clinical technology", "delivery", "risk management", "cross-functional"]
+    },
+    {
+      "id": "b010",
+      "text": "Led clinical technology deployments including BrainLab Operating Rooms and Epic-support infrastructure, aligning execution with hospital compliance standards and clinical stakeholder requirements.",
+      "keywords": ["clinical technology", "healthcare technology", "compliance", "infrastructure", "stakeholder", "systems integration"]
+    },
+    {
+      "id": "b011",
+      "text": "Managed 10+ enterprise AV/IT integration projects annually ranging from $500K to $1M for financial sector clients including JP Morgan, Morgan Stanley, and MetLife.",
+      "keywords": ["portfolio management", "budget", "enterprise infrastructure", "stakeholder", "delivery", "program management"]
+    },
+    {
+      "id": "b012",
+      "text": "Led flagship MetLife HQ buildout delivering 30+ conference rooms, two large-format video walls, and enterprise digital signage — coordinating Sales, Procurement, Fabrication, and Field Operations.",
+      "keywords": ["cross-functional", "infrastructure", "collaboration", "delivery", "vendor management", "stakeholder"]
+    },
+    {
+      "id": "b013",
+      "text": "Directed cross-functional coordination across four internal departments, increasing project velocity by 25% through improved process standardization and communication frameworks.",
+      "keywords": ["cross-functional", "process optimization", "operational excellence", "program governance", "on-time delivery"]
+    },
+    {
+      "id": "b014",
+      "text": "Formalized program-wide pipeline tracking and capital planning visibility, enabling proactive forecasting and data-driven decision-making for enterprise stakeholders.",
+      "keywords": ["program governance", "capital budget", "financial oversight", "dashboard", "reporting", "stakeholder"]
+    },
+    {
+      "id": "b015",
+      "text": "Progressed from Systems Administrator into enterprise program leadership, building deep expertise across Microsoft 365, Cisco VoIP, SharePoint, structured cabling, and AV integration platforms.",
+      "keywords": ["Microsoft 365", "SharePoint", "Cisco", "infrastructure", "systems integration", "collaboration"]
+    }
+  ]
+}
