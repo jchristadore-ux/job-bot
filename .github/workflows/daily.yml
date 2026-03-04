@@ -1,0 +1,115 @@
+name: Daily Job Match
+
+on:
+  schedule:
+    - cron: "0 7 * * 1-5"
+  workflow_dispatch:
+
+jobs:
+  run-job-bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Ensure output directory exists
+        run: mkdir -p output
+
+      - name: Run job bot
+        env:
+          GMAIL_SMTP_USER: ${{ secrets.GMAIL_SMTP_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+        run: python run.py
+
+      - name: Upload summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: job-summary-${{ github.run_id }}
+          path: output/summary.txt
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Upload tailored packets ZIP
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tailored-packets-${{ github.run_id }}
+          path: output/tailored_packets.zip
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Upload individual DOCX files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: docx-files-${{ github.run_id }}
+          path: output/*.docx
+          retention-days: 30
+          if-no-files-found: warn
+```
+
+4. Commit
+
+---
+
+#### FILE 7 of 8 — Upload your resume
+
+1. Click **Add file → Upload files**
+2. Drag in your `master_resume.docx`
+3. Make sure the filename stays exactly `master_resume.docx`
+4. Commit
+
+---
+
+#### FILE 8 of 8 — Upload the DOCX templates
+
+The templates need to go inside a `templates/` folder. GitHub can't create empty folders, but you can trick it:
+
+1. Click **Add file → Upload files**
+2. Drag in both files at once:
+   - `resume_template.docx`
+   - `cover_letter_template.docx`
+   
+   These are in the `templates/` folder inside the ZIP I gave you.
+   
+3. Before committing, GitHub will show the filenames — they'll land in the root. That's a problem. 
+
+   **Instead, do this:** Click **Add file → Create new file**, type `templates/placeholder.txt` in the name box, put a single space in the body, and commit. This creates the `templates/` folder. Then go back and upload the two DOCX files into it by clicking into the `templates/` folder first, then **Add file → Upload files**.
+
+4. Commit
+
+---
+
+### ✅ When done, your repo should look like this:
+```
+job-bot/
+├── .github/
+│   └── workflows/
+│       └── daily.yml
+├── templates/
+│   ├── resume_template.docx
+│   └── cover_letter_template.docx
+├── master_resume.docx
+├── bullet_bank.json
+├── config.yaml
+├── requirements.txt
+├── run.py
+└── .gitignore
