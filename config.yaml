@@ -25,16 +25,54 @@ scoring:
     - global program manager
     - director of program
     - director of infrastructure
+    - director of technology
+    - director of it
     - head of programs
     - head of technology
+    - head of infrastructure
+    - head of it
     - vp of program
     - vp of infrastructure
+    - vp of technology
+    - vp of it
     - technical program manager
     - infrastructure manager
     - it program manager
     - enterprise program
     - delivery manager
     - portfolio manager
+    - it director
+    - technology director
+    - program director
+
+  # Jobs whose titles contain ANY of these strings are penalized -20 points
+  # This prevents pure engineering / analyst roles from ever ranking in your top 5
+  title_blocklist:
+    - devops engineer
+    - data analyst
+    - data engineer
+    - data scientist
+    - software engineer
+    - software developer
+    - frontend engineer
+    - backend engineer
+    - full stack
+    - fullstack
+    - machine learning engineer
+    - ml engineer
+    - security engineer
+    - network engineer
+    - cloud engineer
+    - site reliability engineer
+    - sre engineer
+    - qa engineer
+    - quality assurance engineer
+    - product analyst
+    - business analyst
+    - systems engineer
+    - platform engineer
+    - microservices engineer
+    - solutions engineer
 
 sources:
   remotive: true
