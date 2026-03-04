@@ -1,9 +1,10 @@
 # ─────────────────────────────────────────────────────────────────
-# Job Bot Configuration
+# Job Bot Configuration — John Christadore
 # ─────────────────────────────────────────────────────────────────
 
 filters:
-  # Minimum annual base salary (USD). Roles with NO salary info still pass.
+  # Minimum annual base salary (USD).
+  # Roles with NO stated salary still pass — only filtered if salary is explicit AND below this.
   min_salary: 165000
 
   # Must mention at least one comp signal (bonus/equity/RSU/stock/401k)
@@ -16,24 +17,24 @@ filters:
   full_time_only: true
 
 scoring:
-  # Title signals — match against job title (case-insensitive substring)
+  # These are matched against job TITLES (case-insensitive substring match)
+  # Each hit adds +3 points to the job's score
   title_signals:
-    - tpm
-    - technical program manager
     - program manager
     - senior program manager
-    - infrastructure
-    - data center
-    - platform
-    - cloud
-    - devops
-    - sre
-    - site reliability
-    - engineering manager
-    - director of engineering
-    - vp of engineering
-    - principal engineer
-    - staff engineer
+    - global program manager
+    - director of program
+    - director of infrastructure
+    - head of programs
+    - head of technology
+    - vp of program
+    - vp of infrastructure
+    - technical program manager
+    - infrastructure manager
+    - it program manager
+    - enterprise program
+    - delivery manager
+    - portfolio manager
 
 sources:
   remotive: true
