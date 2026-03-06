@@ -1,152 +1,161 @@
 {
   "keywords_priority": [
-    "product manager",
-    "program manager",
-    "project manager",
-    "product owner",
+    "technical program manager",
+    "senior program manager",
+    "senior product manager",
+    "program management",
+    "product management",
     "product roadmap",
     "product strategy",
     "product lifecycle",
     "go-to-market",
     "GTM",
-    "user research",
-    "product discovery",
-    "AI product",
-    "ML product",
+    "cross-functional",
+    "stakeholder alignment",
+    "executive stakeholder",
+    "OKRs",
+    "KPIs",
+    "milestone",
+    "risk mitigation",
+    "agile",
+    "scrum",
+    "sprint",
+    "program governance",
+    "delivery",
+    "on-time delivery",
+    "launch",
+    "scalability",
+    "operational excellence",
+    "process improvement",
+    "process optimization",
     "data-driven",
-    "sports technology",
-    "fitness technology",
-    "wearables",
+    "metrics",
+    "dashboard",
+    "reporting",
+    "MLOps",
+    "AI product",
+    "machine learning",
+    "data platform",
+    "infrastructure",
     "SaaS",
     "B2B",
     "platform",
     "API",
-    "cross-functional",
-    "stakeholder",
-    "executive",
-    "OKRs",
-    "KPIs",
-    "roadmap",
-    "sprint",
-    "agile",
-    "scrum",
-    "delivery",
-    "launch",
-    "scalability",
-    "growth",
-    "retention",
-    "engagement",
-    "dashboard",
-    "reporting",
-    "analytics",
-    "program governance",
-    "process optimization",
-    "vendor management",
-    "compliance",
-    "remote team",
+    "enterprise software",
+    "fintech",
+    "digital health",
+    "healthtech",
+    "wearable",
+    "fitness platform",
+    "sports technology",
+    "human performance",
     "distributed team",
-    "capital budget",
+    "remote team",
+    "vendor management",
     "budget forecasting",
-    "risk management",
-    "on-time delivery",
-    "Microsoft 365",
+    "capital budget",
+    "compliance",
     "Jira",
     "Confluence",
-    "Salesforce",
-    "systems integration"
+    "systems integration",
+    "influence without authority",
+    "ambiguity",
+    "fast-paced",
+    "startup"
   ],
 
   "target_titles": [
+    "Senior Program Manager",
+    "Senior Technical Program Manager",
+    "Technical Program Manager",
     "Senior Product Manager",
     "Principal Product Manager",
-    "Director of Product Management",
-    "Head of Product",
-    "VP of Product",
-    "Senior Program Manager",
-    "Global Program Manager",
     "Director of Program Management",
-    "Technical Program Manager",
-    "Senior Project Manager",
-    "Director of Project Management",
-    "Group Product Manager",
-    "Product Lead"
+    "Director of Product",
+    "Head of Product",
+    "VP of Program Management",
+    "Operations Lead",
+    "Company Operations Lead",
+    "Strategy and Operations Manager",
+    "Chief of Staff",
+    "Delivery Manager"
   ],
 
   "bullets": [
     {
       "id": "b001",
-      "text": "Led end-to-end product delivery for a global suite of technology programs, managing full product lifecycles from discovery through launch with individual budgets ranging from $500K to $5M.",
-      "keywords": ["product lifecycle", "delivery", "launch", "program manager", "budget", "product manager"]
+      "text": "Led end-to-end execution of a global technology program portfolio, managing full project lifecycles from discovery through launch — aligning cross-functional teams across Engineering, Product, Finance, and GTM on scope, schedule, and budget.",
+      "keywords": ["program management", "delivery", "launch", "cross-functional", "go-to-market", "GTM", "OKRs", "milestone"]
     },
     {
       "id": "b002",
-      "text": "Defined and owned cross-functional product roadmaps aligned to company OKRs, coordinating engineering, design, data, and go-to-market teams across distributed global teams.",
-      "keywords": ["product roadmap", "OKRs", "cross-functional", "go-to-market", "distributed team", "roadmap"]
+      "text": "Partnered with AI/ML and data platform engineering teams to manage program execution from early concept through production — translating complex technical work into clear plans, dependencies, and outcomes for senior stakeholders.",
+      "keywords": ["AI product", "machine learning", "MLOps", "data platform", "technical program manager", "stakeholder alignment", "delivery"]
     },
     {
       "id": "b003",
-      "text": "Reduced delivery timelines by 15% through agile process optimization and sprint cadence improvements across a portfolio of concurrent product programs.",
-      "keywords": ["delivery", "agile", "sprint", "process optimization", "on-time delivery", "program manager"]
+      "text": "Developed and maintained a coherent program strategy across multiple sub-teams, serving as the source of truth on initiative status, risks, blockers, and resourcing — enabling executives to make faster, better-informed decisions.",
+      "keywords": ["program governance", "risk mitigation", "executive stakeholder", "dashboard", "reporting", "OKRs", "data-driven"]
     },
     {
       "id": "b004",
-      "text": "Implemented performance dashboards and KPI reporting frameworks, increasing on-time feature delivery rates by 20% year-over-year and improving stakeholder visibility across the product portfolio.",
-      "keywords": ["dashboard", "KPIs", "reporting", "on-time delivery", "stakeholder", "analytics"]
+      "text": "Reduced delivery timelines by 15% through agile process improvements and sprint cadence optimization, increasing on-time completion rates by 20% YoY across a portfolio of concurrent programs.",
+      "keywords": ["agile", "sprint", "process optimization", "on-time delivery", "operational excellence", "metrics", "KPIs"]
     },
     {
       "id": "b005",
-      "text": "Built and maintained strong executive-level stakeholder relationships, translating ambiguous business requirements into clear product strategies and measurable delivery milestones.",
-      "keywords": ["executive", "stakeholder", "product strategy", "delivery", "roadmap", "program governance"]
+      "text": "Drove cross-functional alignment across Engineering, Product, Sales, and Customer Success to define and execute GTM strategies — consistently landing program launches on time and within scope at high-growth SaaS and enterprise tech companies.",
+      "keywords": ["cross-functional", "go-to-market", "launch", "SaaS", "enterprise software", "B2B", "delivery", "stakeholder alignment"]
     },
     {
       "id": "b006",
-      "text": "Administered over $5M in annual program budgets across 20–40 concurrent enterprise technology initiatives, identifying cost efficiencies without compromising product scope or quality.",
-      "keywords": ["capital budget", "budget forecasting", "program manager", "SaaS", "platform", "scalability"]
+      "text": "Administered over $5M in annual program budgets across 20–40 concurrent enterprise technology initiatives, proactively identifying cost efficiencies and managing fiscal year giveback strategy without compromising scope.",
+      "keywords": ["capital budget", "budget forecasting", "program governance", "infrastructure", "operational excellence", "scalability"]
     },
     {
       "id": "b007",
-      "text": "Drove product discovery and user research initiatives to inform roadmap prioritization, leveraging data-driven insights to increase user engagement by 30% and improve retention metrics.",
-      "keywords": ["product discovery", "user research", "data-driven", "engagement", "retention", "product manager"]
+      "text": "Owned product roadmap prioritization and OKR alignment for a SaaS platform, collaborating with engineering, design, and data science to ship high-impact features that drove measurable gains in user engagement and retention.",
+      "keywords": ["product roadmap", "OKRs", "product strategy", "SaaS", "platform", "data-driven", "scalability", "launch"]
     },
     {
       "id": "b008",
-      "text": "Served as cross-functional program lead across Engineering, Sales, Marketing, and Customer Success — aligning teams on GTM strategy, launch milestones, and post-launch success metrics.",
-      "keywords": ["cross-functional", "go-to-market", "launch", "GTM", "stakeholder", "product manager"]
+      "text": "Served as a strategic cross-functional liaison — bridging deeply technical engineering teams and non-technical business stakeholders, communicating complex architecture trade-offs and program risks with clarity and confidence.",
+      "keywords": ["cross-functional", "influence without authority", "technical program manager", "stakeholder alignment", "ambiguity", "executive stakeholder"]
     },
     {
       "id": "b009",
-      "text": "Directed emergency technology deployments under mission-critical conditions, delivering fully operational systems on compressed timelines while maintaining compliance and quality standards.",
-      "keywords": ["delivery", "compliance", "risk management", "on-time delivery", "program manager", "systems integration"]
+      "text": "Directed mission-critical technology deployments under compressed timelines and high-stakes conditions, coordinating distributed teams across multiple geographies while maintaining compliance, quality, and delivery commitments.",
+      "keywords": ["delivery", "compliance", "risk mitigation", "distributed team", "remote team", "on-time delivery", "infrastructure"]
     },
     {
       "id": "b010",
-      "text": "Partnered with data science and ML engineering teams to bring AI-powered product features from concept to production, managing model evaluation cycles, stakeholder reviews, and phased rollout plans.",
-      "keywords": ["AI product", "ML product", "data-driven", "product manager", "launch", "scalability", "platform"]
+      "text": "Spearheaded the build-out of a connected fitness and health tracking platform program, coordinating hardware integrations, API partnerships, and phased product launches — achieving 40% growth in monthly active users within two quarters.",
+      "keywords": ["wearable", "fitness platform", "human performance", "API", "launch", "product lifecycle", "digital health", "healthtech"]
     },
     {
       "id": "b011",
-      "text": "Managed a portfolio of 10+ concurrent SaaS product initiatives ranging from $500K to $1M, coordinating cross-functional teams across sales, engineering, and customer success to hit quarterly OKRs.",
-      "keywords": ["SaaS", "portfolio", "OKRs", "cross-functional", "B2B", "product manager", "program manager"]
+      "text": "Managed a portfolio of 10+ concurrent B2B SaaS and enterprise software programs ranging from $500K to $5M, driving quarterly OKR achievement and maintaining high stakeholder satisfaction through structured communication and governance.",
+      "keywords": ["SaaS", "B2B", "enterprise software", "OKRs", "program governance", "stakeholder alignment", "KPIs", "reporting"]
     },
     {
       "id": "b012",
-      "text": "Spearheaded the launch of a connected fitness platform feature set, coordinating hardware integrations, API partnerships, and app store releases — achieving 40% growth in MAU within two quarters.",
-      "keywords": ["fitness technology", "wearables", "API", "launch", "growth", "platform", "product manager"]
+      "text": "Built and formalized agile program governance using Jira and Confluence, introducing sprint planning, backlog grooming, retrospective cadences, and risk trackers that improved team velocity by 25% and eliminated recurring delivery bottlenecks.",
+      "keywords": ["agile", "scrum", "sprint", "Jira", "Confluence", "program governance", "process improvement", "on-time delivery"]
     },
     {
       "id": "b013",
-      "text": "Led the build-out of a sports analytics data platform, translating real-time performance data into actionable product features for coaches, athletes, and enterprise clients.",
-      "keywords": ["sports technology", "sports analytics", "data-driven", "analytics", "platform", "product manager", "B2B"]
+      "text": "Led sports analytics and digital performance platform programs, translating real-time athlete data and biometric insights into actionable product features for enterprise clients — spanning sports technology, fitness platforms, and human performance verticals.",
+      "keywords": ["sports technology", "human performance", "wearable", "fitness platform", "data-driven", "API", "platform", "launch"]
     },
     {
       "id": "b014",
-      "text": "Formalized agile program governance using Jira and Confluence, establishing sprint planning, backlog grooming, and retrospective cadences that improved team velocity by 25%.",
-      "keywords": ["agile", "scrum", "Jira", "Confluence", "program governance", "sprint", "process optimization"]
+      "text": "Drove company-wide operational excellence initiatives — establishing cross-functional process frameworks, performance monitoring cadences, and QBR governance structures that improved strategic execution velocity and accountability.",
+      "keywords": ["operational excellence", "process improvement", "OKRs", "KPIs", "program governance", "dashboard", "metrics", "fast-paced"]
     },
     {
       "id": "b015",
-      "text": "Progressed from technical operations into senior product and program leadership, building expertise across SaaS platforms, API integrations, Microsoft 365, and enterprise systems — bridging the gap between technical teams and business stakeholders.",
-      "keywords": ["SaaS", "API", "Microsoft 365", "systems integration", "product manager", "program manager", "stakeholder"]
+      "text": "Progressed from technical operations into senior program and product leadership, developing deep expertise across SaaS platforms, AI/data infrastructure, API integrations, and enterprise systems — consistently bridging technical teams and business stakeholders at scale.",
+      "keywords": ["SaaS", "AI product", "data platform", "API", "infrastructure", "systems integration", "technical program manager", "startup", "ambiguity"]
     }
   ]
 }
