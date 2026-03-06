@@ -16,37 +16,62 @@ filters:
   # Only full-time employee roles (rejects contract/freelance/part-time)
   full_time_only: true
 
+  # Target industry verticals — used for scoring boost (not hard filter)
+  # Roles at companies in these spaces get a +10 score bonus
+  preferred_industries:
+    - artificial intelligence
+    - machine learning
+    - AI
+    - sports technology
+    - sports analytics
+    - fitness technology
+    - health and fitness
+    - wearables
+    - athletic performance
+    - SaaS
+    - B2B software
+    - developer tools
+    - cloud platform
+    - data platform
+
 scoring:
   # These are matched against job TITLES (case-insensitive substring match)
-  # Each hit adds +3 points to the job's score
+  # Each hit adds +5 points to the job's score
   title_signals:
+    # Product Management
+    - product manager
+    - senior product manager
+    - principal product manager
+    - director of product
+    - head of product
+    - vp of product
+    - vp product
+    - chief product officer
+    - group product manager
+    - product lead
+    - product owner
+    # Program Management
     - program manager
     - senior program manager
     - global program manager
-    - director of program
-    - director of infrastructure
-    - director of technology
-    - director of it
-    - head of programs
-    - head of technology
-    - head of infrastructure
-    - head of it
-    - vp of program
-    - vp of infrastructure
-    - vp of technology
-    - vp of it
     - technical program manager
-    - infrastructure manager
-    - it program manager
-    - enterprise program
+    - director of program
+    - head of programs
+    - vp of program
+    - enterprise program manager
     - delivery manager
     - portfolio manager
-    - it director
-    - technology director
     - program director
+    # Project Management
+    - project manager
+    - senior project manager
+    - director of project
+    - head of project management
+    - project lead
+    - it project manager
+    - technical project manager
 
   # Jobs whose titles contain ANY of these strings are penalized -20 points
-  # This prevents pure engineering / analyst roles from ever ranking in your top 5
   title_blocklist:
     - devops engineer
     - data analyst
@@ -67,12 +92,84 @@ scoring:
     - sre engineer
     - qa engineer
     - quality assurance engineer
-    - product analyst
     - business analyst
     - systems engineer
     - platform engineer
-    - microservices engineer
     - solutions engineer
+    - marketing manager
+    - sales manager
+    - account executive
+    - account manager
+    - recruiter
+    - hr manager
+
+  # Company/description keywords that signal a preferred industry vertical
+  # Each hit adds +3 points
+  industry_signals:
+    # AI / ML
+    - artificial intelligence
+    - machine learning
+    - large language model
+    - LLM
+    - generative AI
+    - AI platform
+    - AI startup
+    - foundation model
+    - computer vision
+    - natural language processing
+    - OpenAI
+    - Anthropic
+    - Cohere
+    - Hugging Face
+    - Scale AI
+    - Weights & Biases
+    # Sports Tech
+    - sports technology
+    - sports analytics
+    - sports data
+    - sports betting
+    - fantasy sports
+    - athlete performance
+    - sports platform
+    - sports media
+    - esports
+    - gaming platform
+    - Sportradar
+    - Stats Perform
+    - Hudl
+    - Catapult
+    - Whoop
+    - Strava
+    - Nike
+    - Adidas
+    - Under Armour
+    - DraftKings
+    - FanDuel
+    # Fitness / Health Tech
+    - fitness technology
+    - digital fitness
+    - connected fitness
+    - health and fitness
+    - wellness platform
+    - wearable technology
+    - wearables
+    - athletic performance
+    - recovery technology
+    - Peloton
+    - Garmin
+    - Fitbit
+    - Apple Health
+    - MyFitnessPal
+    - Noom
+    - Zwift
+    # General Tech
+    - SaaS
+    - B2B software
+    - developer tools
+    - cloud platform
+    - data platform
+    - API platform
+    - product-led growth
 
 sources:
   remotive: true
