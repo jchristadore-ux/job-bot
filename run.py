@@ -271,15 +271,26 @@ def score_job(job: dict, bullet_bank: dict, cfg: dict) -> float:
     kw_hits = sum(1 for kw in kw_priority if kw.lower() in combined)
     score += kw_hits * 2.0
 
-    # 2. Title signals — boost roles that match your target titles
+    # 2. Title signals — boost roles that match PM/PgM/PdM targets
     title_signals = cfg.get("scoring", {}).get("title_signals", [
-        "program manager", "technical program", "infrastructure",
-        "data center", "senior manager", "director", "vp", "portfolio"
+        "product manager", "program manager", "project manager",
+        "director of product", "head of product", "vp of product",
+        "technical program manager", "product lead", "product owner"
     ])
     title_hits = sum(1 for t in title_signals if t.lower() in title)
-    score += title_hits * 5.0  # increased from 3.0 to 5.0 for stronger title preference
+    score += title_hits * 5.0
 
-    # 3. Comp signals
+    # 3. Industry signals — boost AI/Tech/Sports/Fitness companies
+    industry_signals = cfg.get("scoring", {}).get("industry_signals", [])
+    industry_hits = sum(1 for s in industry_signals if s.lower() in combined)
+    score += industry_hits * 3.0
+
+    # Log industry hits for transparency
+    if industry_hits > 0:
+        matched = [s for s in industry_signals if s.lower() in combined]
+        job["_industry_hits"] = matched[:5]
+
+    # 4. Comp signals
     salary = extract_salary(desc, job["salary_raw"])
     min_salary = cfg.get("filters", {}).get("min_salary", 165_000)
     if salary and salary >= min_salary:
@@ -287,7 +298,7 @@ def score_job(job: dict, bullet_bank: dict, cfg: dict) -> float:
     if has_bonus_or_equity(combined):
         score += 2.0
 
-    # 4. Bullet bank keyword overlap
+    # 5. Bullet bank keyword overlap
     all_bullets = bullet_bank.get("bullets", [])
     bullet_overlap = 0
     for b in all_bullets:
@@ -382,13 +393,28 @@ def fill_template(template_path: Path, replacements: dict) -> Document:
 def build_cover_body(job: dict, matched_keywords: list[str], person: dict) -> str:
     today = date.today().strftime("%B %d, %Y")
     kw_str = ", ".join(matched_keywords[:6]) if matched_keywords else "your key requirements"
+
+    # Detect industry vertical for personalized opening
+    industry_hits = job.get("_industry_hits", [])
+    industry_str = ""
+    if any(k.lower() in ["artificial intelligence", "machine learning", "llm", "generative ai", "ai platform", "ai startup"]
+           for k in industry_hits):
+        industry_str = "I am particularly drawn to your work in artificial intelligence and the opportunity to drive product and program delivery at the intersection of AI and real-world impact."
+    elif any(k.lower() in ["sports technology", "sports analytics", "sports data", "esports", "fantasy sports"]
+             for k in industry_hits):
+        industry_str = "I am especially excited by your work in sports technology, where data and digital platforms are transforming how athletes perform and fans engage."
+    elif any(k.lower() in ["fitness technology", "connected fitness", "wearables", "wellness platform", "digital fitness"]
+             for k in industry_hits):
+        industry_str = "Your focus on fitness technology and connected wellness resonates strongly with my passion for using technology to improve how people perform and feel."
+
     body = (
         f"I am writing to express my strong interest in the {job['title']} position at {job['company']}. "
-        f"With a proven track record in technical program management, infrastructure, and large-scale systems delivery, "
+        f"With a proven track record in product and program management, technology delivery, and cross-functional leadership, "
         f"I am confident in my ability to drive meaningful results for your organization.\n\n"
+        f"{industry_str + chr(10) + chr(10) if industry_str else ''}"
         f"My experience aligns directly with your needs in areas such as {kw_str}. "
         f"I have consistently led cross-functional teams, managed complex stakeholder environments, "
-        f"and delivered high-impact programs on time and within budget at organizations ranging from "
+        f"and delivered high-impact products and programs on time and within budget — at organizations ranging from "
         f"high-growth startups to Fortune 500 enterprises.\n\n"
         f"I thrive in fully remote, distributed environments and bring a strong bias for action, "
         f"structured thinking, and executive presence. I would welcome the opportunity to discuss how "
@@ -426,10 +452,8 @@ def generate_resume(job: dict, bullets: list[str], person: dict, idx: int) -> Pa
 def generate_cover_letter(job: dict, bullets: list[str], person: dict, idx: int) -> Path:
     template = TEMPLATES / "cover_letter_template.docx"
     bullet_bank = load_bullet_bank()
-    matched_kws = []
-    for b in bullets:
-        pass  # bullets are already text; extract nouns as matched keywords
-    # Simple: pull keywords that appear in job description
+
+    # Pull keywords that appear in job description
     kw_priority = bullet_bank.get("keywords_priority", [])
     desc_lower = job["description"].lower()
     matched_kws = [k for k in kw_priority if k.lower() in desc_lower][:8]
@@ -465,13 +489,17 @@ def write_summary(ranked: list[dict]) -> Path:
     for i, job in enumerate(ranked, 1):
         salary = extract_salary(job["description"], job["salary_raw"])
         sal_str = f"${salary:,}" if salary else "Not stated"
+        industry_hits = job.get("_industry_hits", [])
+        industry_str = f"  Industry signals: {', '.join(industry_hits)}" if industry_hits else ""
         lines += [
             f"#{i}  {job['title']} @ {job['company']}",
             f"    Score: {job['_score']}  |  Salary: {sal_str}  |  Source: {job['source']}",
             f"    URL: {job['url']}",
             f"    Why: {job.get('_why', 'Strong keyword overlap with target profile')}",
-            "",
         ]
+        if industry_str:
+            lines.append(industry_str)
+        lines.append("")
     path = OUTPUT / "summary.txt"
     path.write_text("\n".join(lines))
     return path
@@ -484,6 +512,7 @@ def build_why(job: dict, bullet_bank: dict, cfg: dict) -> str:
     kw_priority = bullet_bank.get("keywords_priority", [])
     hits = [k for k in kw_priority if k.lower() in desc][:5]
     salary = extract_salary(desc, job["salary_raw"])
+    industry_hits = job.get("_industry_hits", [])
     parts = []
     if hits:
         parts.append(f"keyword hits: {', '.join(hits)}")
@@ -491,6 +520,8 @@ def build_why(job: dict, bullet_bank: dict, cfg: dict) -> str:
         parts.append(f"salary ${salary:,}")
     if has_bonus_or_equity(desc):
         parts.append("mentions bonus/equity")
+    if industry_hits:
+        parts.append(f"industry: {', '.join(industry_hits[:3])}")
     return "; ".join(parts) if parts else "general remote match"
 
 
@@ -530,9 +561,11 @@ def send_email(summary_path: Path, attachments: list[Path], zip_path: Path, rank
     for i, job in enumerate(ranked, 1):
         salary = extract_salary(job["description"], job["salary_raw"])
         sal_str = f"${salary:,}" if salary else "Not stated"
+        industry_hits = job.get("_industry_hits", [])
+        industry_str = f" | Industry: {', '.join(industry_hits[:3])}" if industry_hits else ""
         body_lines += [
             f"#{i}. {job['title']} @ {job['company']}",
-            f"   Score: {job['_score']} | Salary: {sal_str} | Source: {job['source']}",
+            f"   Score: {job['_score']} | Salary: {sal_str} | Source: {job['source']}{industry_str}",
             f"   {job['url']}",
             f"   Why: {job.get('_why', '')}",
             "",
@@ -617,12 +650,10 @@ def main():
         ok, reason = passes_filters(job, cfg)
         if ok:
             passing.append(job)
-        # else: log.debug(f"REJECT [{job['title']}@{job['company']}]: {reason}")
     log.info(f"After filters: {len(passing)} jobs pass")
 
     if not passing:
         log.warning("No jobs passed filters. Consider loosening config.yaml filters.")
-        # Write empty summary so workflow doesn't fail
         summary_path = OUTPUT / "summary.txt"
         summary_path.write_text(
             f"No jobs matched filters on {date.today()}.\n"
@@ -640,7 +671,9 @@ def main():
     ranked = sorted(passing, key=lambda j: j["_score"], reverse=True)[:TOP_N]
     log.info(f"Top {len(ranked)} matches selected")
     for i, j in enumerate(ranked, 1):
-        log.info(f"  #{i} {j['title']} @ {j['company']} — score {j['_score']}")
+        industry_hits = j.get("_industry_hits", [])
+        industry_str = f" | industry: {', '.join(industry_hits[:3])}" if industry_hits else ""
+        log.info(f"  #{i} {j['title']} @ {j['company']} — score {j['_score']}{industry_str}")
 
     # 5. Generate docs
     resume_files = []
