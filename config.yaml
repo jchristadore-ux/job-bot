@@ -1,11 +1,14 @@
 # ─────────────────────────────────────────────────────────────────
 # Job Bot Configuration — John Christadore
+# Tuned to match: WHOOP, Confluent, Omada, Outreach, Affirm,
+# Digimarc, FluidStack, Dropbox, BetMGM, Campbell's style roles
 # ─────────────────────────────────────────────────────────────────
 
 filters:
   # Minimum annual base salary (USD).
   # Roles with NO stated salary still pass — only filtered if salary is explicit AND below this.
-  min_salary: 165000
+  # Lowered from 165k: many strong-fit roles (WHOOP, Affirm) start at 150k base + equity
+  min_salary: 150000
 
   # Must mention at least one comp signal (bonus/equity/RSU/stock/401k)
   require_bonus_or_equity: true
@@ -16,62 +19,57 @@ filters:
   # Only full-time employee roles (rejects contract/freelance/part-time)
   full_time_only: true
 
-  # Target industry verticals — used for scoring boost (not hard filter)
-  # Roles at companies in these spaces get a +10 score bonus
-  preferred_industries:
-    - artificial intelligence
-    - machine learning
-    - AI
-    - sports technology
-    - sports analytics
-    - fitness technology
-    - health and fitness
-    - wearables
-    - athletic performance
-    - SaaS
-    - B2B software
-    - developer tools
-    - cloud platform
-    - data platform
-
 scoring:
-  # These are matched against job TITLES (case-insensitive substring match)
-  # Each hit adds +5 points to the job's score
+  # Matched against job TITLES (case-insensitive substring)
+  # Each hit adds +5 points
   title_signals:
-    # Product Management
-    - product manager
-    - senior product manager
-    - principal product manager
-    - director of product
-    - head of product
-    - vp of product
-    - vp product
-    - chief product officer
-    - group product manager
-    - product lead
-    - product owner
     # Program Management
-    - program manager
     - senior program manager
-    - global program manager
+    - staff program manager
+    - principal program manager
     - technical program manager
+    - senior technical program manager
+    - global program manager
+    - enterprise program manager
+    - program director
     - director of program
     - head of programs
     - vp of program
-    - enterprise program manager
+    # Product Management
+    - senior product manager
+    - staff product manager
+    - principal product manager
+    - group product manager
+    - director of product
+    - head of product
+    - vp of product
+    - product lead
+    # Project Management
+    - senior project manager
+    - principal project manager
+    - director of project
+    - technical delivery manager
     - delivery manager
     - portfolio manager
-    - program director
-    # Project Management
-    - project manager
-    - senior project manager
-    - director of project
-    - head of project management
-    - project lead
-    - it project manager
-    - technical project manager
+    # Ops / Strategy (matches Omada, Dropbox roles)
+    - director of operations
+    - senior operations manager
+    - head of operations
+    - vp of operations
+    - company operations lead
+    - operations lead
+    - senior operations lead
+    - director of strategy
+    - head of strategy
+    - strategy and operations
+    - chief of staff
+    - business operations
+    - director of technology
+    - it director
+    - technology director
+    - infrastructure manager
 
-  # Jobs whose titles contain ANY of these strings are penalized -20 points
+  # Penalize -20 points for clearly wrong roles
   title_blocklist:
     - devops engineer
     - data analyst
@@ -102,74 +100,69 @@ scoring:
     - account manager
     - recruiter
     - hr manager
+    - financial analyst
+    - research scientist
 
-  # Company/description keywords that signal a preferred industry vertical
-  # Each hit adds +3 points
+  # Description/company signals for preferred verticals
+  # Each hit adds +3 points — stacks across multiple hits
   industry_signals:
-    # AI / ML
+    # AI / ML / Data
     - artificial intelligence
     - machine learning
     - large language model
     - LLM
     - generative AI
     - AI platform
-    - AI startup
+    - MLOps
+    - data platform
+    - data streaming
+    - real-time data
+    - kafka
+    - data infrastructure
+    - applied AI
+    - AI product
     - foundation model
-    - computer vision
-    - natural language processing
-    - OpenAI
-    - Anthropic
-    - Cohere
-    - Hugging Face
-    - Scale AI
-    - Weights & Biases
-    # Sports Tech
+    # Sports / Fitness / Wearables / Health Tech
     - sports technology
     - sports analytics
-    - sports data
+    - wearable
+    - connected fitness
+    - fitness platform
+    - health tracking
+    - human performance
+    - athlete performance
+    - biometric
+    - digital health
+    - healthtech
+    - wellness platform
     - sports betting
     - fantasy sports
-    - athlete performance
-    - sports platform
-    - sports media
-    - esports
-    - gaming platform
-    - Sportradar
-    - Stats Perform
-    - Hudl
-    - Catapult
-    - Whoop
+    # Named companies in target verticals
+    - WHOOP
     - Strava
-    - Nike
-    - Adidas
-    - Under Armour
+    - Garmin
+    - Peloton
     - DraftKings
     - FanDuel
-    # Fitness / Health Tech
-    - fitness technology
-    - digital fitness
-    - connected fitness
-    - health and fitness
-    - wellness platform
-    - wearable technology
-    - wearables
-    - athletic performance
-    - recovery technology
-    - Peloton
-    - Garmin
-    - Fitbit
-    - Apple Health
-    - MyFitnessPal
-    - Noom
-    - Zwift
-    # General Tech
+    - BetMGM
+    - Affirm
+    - Confluent
+    - Outreach
+    - Dropbox
+    - Digimarc
+    - FluidStack
+    - Omada
+    # SaaS / Enterprise Tech
     - SaaS
     - B2B software
     - developer tools
     - cloud platform
-    - data platform
     - API platform
     - product-led growth
+    - enterprise software
+    - fintech
+    - payments platform
+    - digital transformation
 
 sources:
   remotive: true
