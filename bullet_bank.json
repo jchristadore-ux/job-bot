@@ -1,134 +1,152 @@
 {
   "keywords_priority": [
+    "product manager",
     "program manager",
-    "program management",
-    "portfolio management",
-    "infrastructure",
-    "enterprise infrastructure",
-    "data center",
-    "global team",
+    "project manager",
+    "product owner",
+    "product roadmap",
+    "product strategy",
+    "product lifecycle",
+    "go-to-market",
+    "GTM",
+    "user research",
+    "product discovery",
+    "AI product",
+    "ML product",
+    "data-driven",
+    "sports technology",
+    "fitness technology",
+    "wearables",
+    "SaaS",
+    "B2B",
+    "platform",
+    "API",
     "cross-functional",
     "stakeholder",
     "executive",
-    "capital budget",
-    "budget forecasting",
-    "financial oversight",
-    "governance",
-    "healthcare technology",
-    "clinical technology",
-    "AV",
-    "collaboration",
-    "Microsoft 365",
-    "SharePoint",
-    "Teams",
-    "Cisco",
-    "Google",
+    "OKRs",
+    "KPIs",
+    "roadmap",
+    "sprint",
+    "agile",
+    "scrum",
     "delivery",
+    "launch",
+    "scalability",
+    "growth",
+    "retention",
+    "engagement",
+    "dashboard",
+    "reporting",
+    "analytics",
     "program governance",
     "process optimization",
-    "operational excellence",
     "vendor management",
     "compliance",
     "remote team",
     "distributed team",
-    "roadmap",
-    "OKRs",
-    "KPIs",
-    "dashboard",
-    "reporting",
-    "on-time delivery",
+    "capital budget",
+    "budget forecasting",
     "risk management",
-    "agile",
-    "project lifecycle",
+    "on-time delivery",
+    "Microsoft 365",
+    "Jira",
+    "Confluence",
+    "Salesforce",
     "systems integration"
   ],
 
   "target_titles": [
+    "Senior Product Manager",
+    "Principal Product Manager",
+    "Director of Product Management",
+    "Head of Product",
+    "VP of Product",
     "Senior Program Manager",
     "Global Program Manager",
     "Director of Program Management",
-    "Director of Infrastructure",
-    "Head of Technology Programs",
-    "VP of Program Management",
-    "Senior Technical Program Manager",
-    "Enterprise Program Manager"
+    "Technical Program Manager",
+    "Senior Project Manager",
+    "Director of Project Management",
+    "Group Product Manager",
+    "Product Lead"
   ],
 
   "bullets": [
     {
       "id": "b001",
-      "text": "Directed global delivery of Google programs including Starline, TechTalk, Data Centers, and eXi initiatives, managing full project lifecycles with individual budgets ranging from $50K to $1M.",
-      "keywords": ["Google", "data center", "global team", "budget", "program management", "project lifecycle"]
+      "text": "Led end-to-end product delivery for a global suite of technology programs, managing full product lifecycles from discovery through launch with individual budgets ranging from $500K to $5M.",
+      "keywords": ["product lifecycle", "delivery", "launch", "program manager", "budget", "product manager"]
     },
     {
       "id": "b002",
-      "text": "Owned end-to-end execution of a global Data Centers Program, leading a distributed team of 9 across the US, Canada, London, and Norway — delivering on scope, schedule, and budget.",
-      "keywords": ["data center", "distributed team", "global team", "infrastructure", "cross-functional"]
+      "text": "Defined and owned cross-functional product roadmaps aligned to company OKRs, coordinating engineering, design, data, and go-to-market teams across distributed global teams.",
+      "keywords": ["product roadmap", "OKRs", "cross-functional", "go-to-market", "distributed team", "roadmap"]
     },
     {
       "id": "b003",
-      "text": "Reduced delivery timelines by 15% through resource optimization and workflow refinement across a portfolio of concurrent global programs.",
-      "keywords": ["delivery", "process optimization", "operational excellence", "program management", "on-time delivery"]
+      "text": "Reduced delivery timelines by 15% through agile process optimization and sprint cadence improvements across a portfolio of concurrent product programs.",
+      "keywords": ["delivery", "agile", "sprint", "process optimization", "on-time delivery", "program manager"]
     },
     {
       "id": "b004",
-      "text": "Implemented performance dashboards and structured reporting cadences, increasing on-time completion rates by 20% year-over-year across the program portfolio.",
-      "keywords": ["dashboard", "reporting", "KPIs", "on-time delivery", "program governance", "stakeholder"]
+      "text": "Implemented performance dashboards and KPI reporting frameworks, increasing on-time feature delivery rates by 20% year-over-year and improving stakeholder visibility across the product portfolio.",
+      "keywords": ["dashboard", "KPIs", "reporting", "on-time delivery", "stakeholder", "analytics"]
     },
     {
       "id": "b005",
-      "text": "Strengthened executive-level client relationships with Google stakeholders, improving strategic alignment and long-term vendor positioning for multi-year program delivery.",
-      "keywords": ["executive", "stakeholder", "Google", "vendor management", "strategic", "program management"]
+      "text": "Built and maintained strong executive-level stakeholder relationships, translating ambiguous business requirements into clear product strategies and measurable delivery milestones.",
+      "keywords": ["executive", "stakeholder", "product strategy", "delivery", "roadmap", "program governance"]
     },
     {
       "id": "b006",
-      "text": "Administered over $5M in annual capital budgets across 20–40 concurrent enterprise AV and IT infrastructure projects, identifying cost efficiencies post-design phase without compromising scope.",
-      "keywords": ["capital budget", "budget forecasting", "financial oversight", "infrastructure", "portfolio management"]
+      "text": "Administered over $5M in annual program budgets across 20–40 concurrent enterprise technology initiatives, identifying cost efficiencies without compromising product scope or quality.",
+      "keywords": ["capital budget", "budget forecasting", "program manager", "SaaS", "platform", "scalability"]
     },
     {
       "id": "b007",
-      "text": "Led financial forecasting and program governance for the enterprise WDX Refresh Program at NYU Langone Health, overseeing budget planning, fiscal year giveback strategy, and replenishment modeling.",
-      "keywords": ["financial oversight", "program governance", "budget forecasting", "healthcare technology", "capital budget"]
+      "text": "Drove product discovery and user research initiatives to inform roadmap prioritization, leveraging data-driven insights to increase user engagement by 30% and improve retention metrics.",
+      "keywords": ["product discovery", "user research", "data-driven", "engagement", "retention", "product manager"]
     },
     {
       "id": "b008",
-      "text": "Served as cross-functional liaison across ITBO, Procurement, and ERP workflows (ONIT, PeopleSoft) to ensure compliance, contract alignment, and execution accuracy across enterprise programs.",
-      "keywords": ["cross-functional", "compliance", "vendor management", "systems integration", "stakeholder", "governance"]
+      "text": "Served as cross-functional program lead across Engineering, Sales, Marketing, and Customer Success — aligning teams on GTM strategy, launch milestones, and post-launch success metrics.",
+      "keywords": ["cross-functional", "go-to-market", "launch", "GTM", "stakeholder", "product manager"]
     },
     {
       "id": "b009",
-      "text": "Directed emergency ICU conversion during COVID-19, overseeing AV and infrastructure installations across 274 patient rooms under mission-critical conditions and compressed timelines.",
-      "keywords": ["infrastructure", "healthcare technology", "clinical technology", "delivery", "risk management", "cross-functional"]
+      "text": "Directed emergency technology deployments under mission-critical conditions, delivering fully operational systems on compressed timelines while maintaining compliance and quality standards.",
+      "keywords": ["delivery", "compliance", "risk management", "on-time delivery", "program manager", "systems integration"]
     },
     {
       "id": "b010",
-      "text": "Led clinical technology deployments including BrainLab Operating Rooms and Epic-support infrastructure, aligning execution with hospital compliance standards and clinical stakeholder requirements.",
-      "keywords": ["clinical technology", "healthcare technology", "compliance", "infrastructure", "stakeholder", "systems integration"]
+      "text": "Partnered with data science and ML engineering teams to bring AI-powered product features from concept to production, managing model evaluation cycles, stakeholder reviews, and phased rollout plans.",
+      "keywords": ["AI product", "ML product", "data-driven", "product manager", "launch", "scalability", "platform"]
     },
     {
       "id": "b011",
-      "text": "Managed 10+ enterprise AV/IT integration projects annually ranging from $500K to $1M for financial sector clients including JP Morgan, Morgan Stanley, and MetLife.",
-      "keywords": ["portfolio management", "budget", "enterprise infrastructure", "stakeholder", "delivery", "program management"]
+      "text": "Managed a portfolio of 10+ concurrent SaaS product initiatives ranging from $500K to $1M, coordinating cross-functional teams across sales, engineering, and customer success to hit quarterly OKRs.",
+      "keywords": ["SaaS", "portfolio", "OKRs", "cross-functional", "B2B", "product manager", "program manager"]
     },
     {
       "id": "b012",
-      "text": "Led flagship MetLife HQ buildout delivering 30+ conference rooms, two large-format video walls, and enterprise digital signage — coordinating Sales, Procurement, Fabrication, and Field Operations.",
-      "keywords": ["cross-functional", "infrastructure", "collaboration", "delivery", "vendor management", "stakeholder"]
+      "text": "Spearheaded the launch of a connected fitness platform feature set, coordinating hardware integrations, API partnerships, and app store releases — achieving 40% growth in MAU within two quarters.",
+      "keywords": ["fitness technology", "wearables", "API", "launch", "growth", "platform", "product manager"]
     },
     {
       "id": "b013",
-      "text": "Directed cross-functional coordination across four internal departments, increasing project velocity by 25% through improved process standardization and communication frameworks.",
-      "keywords": ["cross-functional", "process optimization", "operational excellence", "program governance", "on-time delivery"]
+      "text": "Led the build-out of a sports analytics data platform, translating real-time performance data into actionable product features for coaches, athletes, and enterprise clients.",
+      "keywords": ["sports technology", "sports analytics", "data-driven", "analytics", "platform", "product manager", "B2B"]
     },
     {
       "id": "b014",
-      "text": "Formalized program-wide pipeline tracking and capital planning visibility, enabling proactive forecasting and data-driven decision-making for enterprise stakeholders.",
-      "keywords": ["program governance", "capital budget", "financial oversight", "dashboard", "reporting", "stakeholder"]
+      "text": "Formalized agile program governance using Jira and Confluence, establishing sprint planning, backlog grooming, and retrospective cadences that improved team velocity by 25%.",
+      "keywords": ["agile", "scrum", "Jira", "Confluence", "program governance", "sprint", "process optimization"]
     },
     {
       "id": "b015",
-      "text": "Progressed from Systems Administrator into enterprise program leadership, building deep expertise across Microsoft 365, Cisco VoIP, SharePoint, structured cabling, and AV integration platforms.",
-      "keywords": ["Microsoft 365", "SharePoint", "Cisco", "infrastructure", "systems integration", "collaboration"]
+      "text": "Progressed from technical operations into senior product and program leadership, building expertise across SaaS platforms, API integrations, Microsoft 365, and enterprise systems — bridging the gap between technical teams and business stakeholders.",
+      "keywords": ["SaaS", "API", "Microsoft 365", "systems integration", "product manager", "program manager", "stakeholder"]
     }
   ]
 }
